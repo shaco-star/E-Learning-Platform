@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instructor Dashboard</title>
+    <link rel="stylesheet" href="css/master.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1>Instructor</h1>
+    <div class="container">
+      <form id="course-form">
+        <input type="hidden" id="course-id" />
+        <input type="text" id="course-name" placeholder="Course Name" />
+        <button id="add-course">Add Course</button>
+        <button id="update-course" style="display: none">Update Course</button>
+      </form>
+      <ul id="course-list"></ul>
+    </div>
+
+    <div class="container">
+      <form id="item-form">
+        <input type="hidden" id="item-id" />
+        <input type="text" id="item-name" placeholder="Lesson or Quiz Name" />
+        <select id="item-type">
+          <option value="lesson">Lesson</option>
+          <option value="quiz">Quiz</option>
+        </select>
+        <button id="add-item">Add</button>
+      </form>
+      <ul id="item-list"></ul>
+    </div>
+
+    <div class="container">
+      <h2>Student Scores</h2>
+      <table id="score-table">
+        <thead>
+          <tr>
+            <th>Student Name</th>
+            <th>Score</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div class="container">
+      <h2>Comments</h2>
+      <ul id="comment-list"></ul>
+    </div>
+
+
+    <div class="container">
+      <h2>Total Profit</h2>
+      <h4>Total profit: $500</h4>
+      <p id="total-profit"></p>
+    </div>
+
+    <div class="container">
+      <h2>Instructor Profile</h2>
+      <div id="profile">
+        <p><strong>Name:</strong> <span id="profile-name"></span></p>
+        <p><strong>Email:</strong> <span id="profile-email"></span></p>
+        <p><strong>Bio:</strong> <span id="profile-bio"></span></p>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

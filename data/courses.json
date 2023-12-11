@@ -1,0 +1,151 @@
+{
+    "courses": [
+        {
+            "id": 1,
+            "name": "Introduction to Programming",
+            "description": "Learn the basics of programming and computer science.",
+            "courseImg": "assets/dev.jpg",
+            "instructor": {
+                "name": "John Doe",
+                "role": "Python developer",
+                "img": "assets/laura-jones.jpg"
+            },
+            "enrollment": 30,
+            "lessonsNum": 100,
+            "rating": 2,
+            "tag": "Development",
+            "duration": 10,
+            "numberOfStudents": 25,
+            "numberOfLessons": 20,
+        "skillLevel": "Beginner",
+        "language": "English",
+        "numberOfQuizzes": 5,
+        "enrollmentDeadline": "2023-06-01",
+        "price": 50,
+        "cert": "Yes"
+            
+        },
+        {
+            "id": 2,
+            "name": "Data Structures and Algorithms",
+            "description": "Learn about common data structures and algorithms used in computer science.",
+            "courseImg": "assets/business.jpg",
+            "instructor": {
+                "name": "John Doe",
+                "role": "Python developer",
+                "img": "assets/laura-jones.jpg"
+            },
+            "enrollment": 25,
+            "lessonsNum": 100,
+            "rating": 2,
+            "tag": "Development",
+            "duration": 12,
+        "numberOfStudents": 30,
+        "numberOfLessons": 24,
+        "skillLevel": "Intermediate",
+        "language": "Spanish",
+        "numberOfQuizzes": 6,
+        "enrollmentDeadline": "2023-07-01"
+        ,
+        "price": 90,
+        "cert": "Yes"
+        },
+        {
+            "id": 3,
+            "name": "Web Development",
+            "description": "Learn how to build and design websites using HTML, CSS, and JavaScript.",
+            "courseImg": "assets/art.jpg",
+            "instructor": {
+                "name": "bob john",
+                "role": "Python developer",
+                "img": "assets/laura-jones.jpg"
+            },
+            "enrollment": 40,
+            "lessonsNum": 10,
+            "rating": 2,
+            "tag": "Art",
+             "duration": 14,
+        "numberOfStudents": 35,
+        "numberOfLessons": 28,
+        "skillLevel": "Advanced",
+        "language": "French",
+        "numberOfQuizzes": 7,
+        "enrollmentDeadline": "2023-08-01",
+        "price": 100,
+        "cert": "Yes"
+        },
+        {
+            "id": 4,
+            "name": "Machine Learning",
+            "description": "Learn the basics of machine learning and how to apply it to real-world problems.",
+            "courseImg": "assets/art.jpg",
+            "instructor": {
+                "name": "Jane Smith",
+                "role": "Data Scientist",
+                "img": "assets/laura-jones.jpg"
+            },
+            "enrollment": 50,
+            "lessonsNum": 120,
+            "rating": 4,
+            "tag": "Development",
+            "duration": 16,
+    "numberOfStudents": 40,
+    "numberOfLessons": 32,
+    "skillLevel": "Expert",
+    "language": "German",
+    "numberOfQuizzes": 8,
+    "enrollmentDeadline": "2023-09-01",
+        "price": 50,
+        "cert": "Yes"
+        },
+        {
+            "id": 5,
+            "name": "Introduction to Databases",
+            "description": "Learn about database design and management using SQL.",
+            "courseImg": "assets/art.jpg",
+            "instructor": {
+                "name": "Bob Johnson",
+                "role": "Database Administrator",
+                "img": "assets/laura-jones.jpg"
+            },
+            "enrollment": 35,
+            "lessonsNum": 80,
+            "rating": 3,
+            "tag": "Development",
+             "duration": 10,
+        "numberOfStudents": 25,
+        "numberOfLessons": 20,
+        "skillLevel": "Beginner",
+        "language": "English",
+        "numberOfQuizzes": 5,
+        "enrollmentDeadline": "2023-06-01",
+        "price": 20,
+        "cert": "Yes"
+        },
+        {
+            "id": 6,
+            "name": "Graphic Design",
+            "description": "Learn the principles of graphic design and how to create visually appealing designs.",
+            "courseImg": "assets/art.jpg",
+            "instructor": {
+                "name": "Alice Lee",
+                "role": "Graphic Designer",
+                "img": "assets/laura-jones.jpg"
+            },
+            "enrollment": 35,
+            "lessonsNum": 80,
+            "rating": 3,
+            "tag": "Design",
+             "duration": 14,
+        "numberOfStudents": 35,
+        "numberOfLessons": 28,
+        "skillLevel": "Advanced",
+        "language": "French",
+        "numberOfQuizzes": 7,
+        "enrollmentDeadline": "2023-08-01",
+        "price": 70,
+        "cert": "Yes"
+        
+        }
+    ]
+}

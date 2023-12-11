@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/coursesPageStyle.css" />
+    <link rel="stylesheet" href="style/courseDetails.css" />
+    <link rel="stylesheet" href="style/checkout.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="assets/logo.png" alt="logo" />
+      <nav>
+        <ul class="flex">
+          <li><a href="/index.html#home">Home</a></li>
+          <li><a href="/index.html#category">Categories</a></li>
+          <li><a href="/index.html#courses">Courses</a></li>
+          <li><a href="/index.html#about">About Us</a></li>
+          <li class="login"><a href="">Log in</a></li>
+          <li class="btn"><a href="">Sign up</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="title-section background">
+      <div class="container">
+        <h1 class="heading">Courses</h1>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+    <div class="main-container">
+      <div class="check-out-container">
+        <h2 class="checkout-heading">Check out</h2>
+        <div class="check-out-grid">
+          <form action="">
+            <div class="checkout-block left">
+              <h4>Sign in</h4>
+
+              <ul class="form-fields">
+                <li class="form-field">
+                  <label for="username"
+                    >Username or email&nbsp;<span class="required"
+                      >*</span
+                    ></label
+                  >
+                  <input
+                    type="text"
+                    name="username"
+                    id="username"
+                    placeholder="Email or username"
+                    autocomplete="username"
+                  />
+                </li>
+                <li class="form-field">
+                  <label for="password"
+                    >Password&nbsp;<span class="required">*</span></label
+                  >
+                  <span class="lp-password-input password-input"
+                    ><input
+                      type="password"
+                      name="password"
+                      id="password"
+                      placeholder="Password"
+                      autocomplete="current-password" /><span
+                      class="lp-show-password-input"
+                    ></span
+                    ><span class="show-password-input"></span
+                  ></span>
+                </li>
+              </ul>
+
+              <input
+                type="hidden"
+                name="learn-press-checkout-nonce"
+                value="ad607c0f30"
+              />
+              <p class="checkout-remember">
+                <label>
+                  <input type="checkbox" name="rememberme" />
+                  Remember me
+                </label>
+
+                <a class="lp-lost-password-link" href="#"> Lost password? </a>
+              </p>
+
+              <p class="lp-checkout-sign-up-link"></p>
+            </div>
+          </form>
+            <div class="checkout-block right">
+              <h4>Your order</h4>
+            </div>
+        </div>
+      </div>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

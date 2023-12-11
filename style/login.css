@@ -1,0 +1,56 @@
+section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkout-block h4 {
+  margin-top: 0;
+  margin-bottom: 28px;
+  color: #333;
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+.login-container {
+  width: 600px;
+}
+
+.form-fields {
+  padding-bottom: 1.4rem;
+}
+
+.form-field {
+  margin-bottom: 2rem;
+}
+
+.form-fields li {
+  font-size: 1.6rem;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.form-field input {
+  width: 70%;
+  font-size: 1.6rem;
+  padding: 1.5rem;
+  border: 1px solid #ccc;
+}
+
+.checkout-remember {
+  display: flex;
+  font-size: 1.6rem;
+  align-items: center;
+  justify-content: space-between;
+  width: 75%;
+}
+
+.btn{
+  width: 70%;
+  font-size: 2rem;
+  padding: 1.5rem 0;
+}

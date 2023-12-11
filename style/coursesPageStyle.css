@@ -1,0 +1,57 @@
+.title-section {
+  padding: 6rem 0;
+}
+
+.title-section ul {
+  display: flex;
+  align-items: start;
+  gap: 1rem;
+}
+
+.title-section ul li {
+  display: block;
+}
+
+.title-section ul li {
+  position: relative;
+}
+
+.title-section ul a::after {
+  content: "\2771";
+  position: absolute;
+  right: 0rem;
+  font-size: 20px;
+}
+/* //////////////////////////////////////// */
+
+.filter-section-container ul li {
+  display: block;
+}
+
+.course-page-section {
+  grid-template-areas:
+    "filter  search  search"
+    "filter courses courses"
+    "filter courses courses";
+  column-gap: 5rem;
+  row-gap: 2rem;
+  padding: 5rem;
+  
+}
+
+.search {
+  display: block;
+  position: relative;
+  width: 50%;
+  height: 50%;
+  grid-area: search;
+}
+
+.filter-container {
+  grid-area: filter;
+}
+
+.courses-grid-container{
+  grid-area: courses;
+}
+

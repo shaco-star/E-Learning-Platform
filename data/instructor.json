@@ -1,0 +1,18 @@
+{
+  "instructors": [
+    {
+      "imgSrc": "assets/art.jpg",
+      "instructorName": "Jane Doe",
+      "instructorRole": "Python developer",
+      "starsRating": "stars",
+      "instructorImgSrc": "assets/business.jpg"
+    },
+    {
+      "imgSrc": "assets/art.jpg",
+      "instructorName": "Jane Doe",
+      "instructorRole": "Data scientist",
+      "starsRating": "stars",
+      "instructorImgSrc": "assets/business.jpg"
+      }
+  ]
+}

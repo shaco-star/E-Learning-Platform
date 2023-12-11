@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/coursesPageStyle.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="js/script.js" type="module"></script>
+    <header>
+      <img class="logo" src="assets/logo.png" alt="logo" />
+      <nav>
+        <ul class="flex">
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="">Categories</a></li>
+          <li><a href="">Courses</a></li>
+          <li><a href="">About Us</a></li>
+          <li class="login"><a href="">Log in</a></li>
+          <li class="btn"><a href="">Sign up</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="title-section background">
+      <div class="container">
+        <h1 class="heading">Courses</h1>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+    <section class="course-page-section grid container">
+      <div class="filter-container">
+        <h5>filters</h5>
+        <div class="filter-section-container">
+          <div class="filter-header">Category</div>
+          <ul>
+            <li>
+              <input name="dev" type="checkbox" /><label for="dev"
+                >Development</label
+              >
+            </li>
+            <li>
+              <input name="dev" type="checkbox" /><label for="dev"
+                >Development</label
+              >
+            </li>
+            <li>
+              <input name="dev" type="checkbox" /><label for="dev"
+                >Development</label
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="search">
+        <form onsubmit="event.preventDefault();" role="search">
+          <label for="search">Search for stuff</label>
+          <input
+            id="search"
+            type="search"
+            placeholder="Search..."
+            autofocus
+            required
+          />
+          <button type="submit">Go</button>
+        </form>
+      </div>
+
+      <div class="courses-grid-container">
+        <div class="courses-container grid"></div>
+      </div>
+    </section>
+  </body>
+</html>

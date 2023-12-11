@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .center{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .center button{
+            margin-left: 400px;
+            margin-bottom: 600px;
+            padding: 10px 20px;
+            font-size: 15px;
+            font-weight: 600;
+            color: #222;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .popup{
+            position: absolute;
+            top: -150%;
+            left: 50%;
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(1.25);
+            width: 460px;
+            height: 560px;
+            padding: 20px 30px;
+            background: #fff;
+            box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+            border-radius: 10px;
+            transition: top 0ms ease-in-out 200ms,
+                        opacity 200ms ease-in-out 0ms,
+                        transform 200ms ease-in-out 0ms;
+        }
+        .popup.active{
+            top: 50%;
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+            transition: top 0ms ease-in-out 0ms,
+                        opacity 200ms ease-in-out 0ms,
+                        transform 200ms ease-in-out 0ms;
+        }
+        .popup .close-btn{
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          width: 15px;
+          height: 15px;
+          background: #888;
+          color: #eee;
+          text-align: center;
+          line-height: 15px;
+          border-radius: 15px;
+          cursor: pointer;  
+        }
+        .popup .form h2{
+            text-align: center;
+            margin: 10px 0px 20px;
+            font-size: 25px;
+        }
+        .popup .form .form-element{
+            margin: 15px 0px;
+        }
+        .popup .form .form-element label{
+            font-size: 14px;
+            color: #222;
+        }
+        .popup .form .form-element input[type="text"]{
+            margin-top: 15px;
+            display: block;
+            width: 100%;
+            padding: 20px;
+            outline: none;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+        .popup .form .form-element button{
+            width: 100%;
+            height: 40px;
+            border: none;
+            outline: none;
+            background: #f05462;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <button id="Add-new">ADD</button>
+    </div>
+    <div class="popup">
+        <div class="close-btn">&times;</div>
+        <div class="form">
+            <h2>Add instructor</h2>
+            <div class="form-element">
+                <label for="name">Instructor name: </label>
+                <input type="text" id="name" placeholder="Name">
+            </div>
+            <div class="form-element">
+                <label for="course">Course: </label>
+                <input type="text" id="course" placeholder="Course">
+            </div>
+            <div class="form-element">
+                <label for="price">Course price</label>
+                <input type="text" id="price" placeholder="Price">
+            </div>
+            <div class="form-element">
+                <button>Add</button>
+            </div>
+        </div>
+    </div>
+<script>
+    document.querySelector("#Add-new").addEventListener("click", function(){
+        document.querySelector(".popup").classList.add("active");
+    });
+    document.querySelector(".popup .close-btn").addEventListener("click", function(){
+        document.querySelector(".popup").classList.remove("active");
+    });
+</script>
+</body>
+</html>

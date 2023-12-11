@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/coursesPageStyle.css" />
+    <link rel="stylesheet" href="style/courseDetails.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="assets/logo.png" alt="logo" />
+      <nav>
+        <ul class="flex">
+          <li><a href="/index.html#home">Home</a></li>
+          <li><a href="/index.html#category">Categories</a></li>
+          <li><a href="/index.html#courses">Courses</a></li>
+          <li><a href="/index.html#about">About Us</a></li>
+          <li class="login"><a href="">Log in</a></li>
+          <li class="btn"><a href="">Sign up</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="title-section background">
+      <div class="container">
+        <h1 class="heading">Courses</h1>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+    <section class="course-details-section">
+      <div class="main-container">
+        <div class="img-container"><img src="assets/art.jpg" alt="" /></div>
+        <div class="content-container">
+          <div class="course-details">
+            <div class="course-details-header">
+              <div class="instructor flex">
+                <img src="assets/laura-jones.jpg" alt="" class="circular-img" />
+                <div class="instructor-name">
+                  <span>By </span><span class="instructorName"></span>
+                </div>
+              </div>
+              <div class="course-rating"></div>
+            </div>
+            <h3 class="course-heading">Course Name</h3>
+            <div class="course-content">
+              <div class="tab-nav">
+                <button
+                  id="default"
+                  class="tablinks"
+                  onclick="openTab(event, 'overview')"
+                >
+                  Overview
+                </button>
+                <button
+                  class="tablinks"
+                  onclick="openTab(event, 'curriculum')"
+                >
+                  Curriculum
+                </button>
+                <button
+                  class="tablinks"
+                  onclick="openTab(event, 'instructor')"
+                >
+                  Instructor
+                </button>
+                <button class="tablinks" onclick="openTab(event, 'reviews')">
+                  Reviews
+                </button>
+              </div>
+              <div class="tab-panels">
+                <div id="overview" class="tabcontent">
+                  <h4>Course Description</h4>
+                  <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Enim nemo consectetur fugit sunt iure expedita ut. Hic
+                    nesciunt, dolore sit quo veritatis molestias voluptate illum
+                    similique eligendi dolor perferendis reiciendis!
+                  </p>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Sapiente laboriosam quod perferendis, neque fugiat dolorem.
+                    Eaque expedita itaque non doloremque praesentium ad minus
+                    nesciunt minima iusto! Perferendis cum veritatis
+                    repellendus!
+                  </p>
+                  <h4>What You’ll Learn From This Course</h4>
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Perspiciatis cum reiciendis optio exercitationem, aspernatur
+                    non ipsum aliquid iure ex aut ea facere laboriosam,
+                    repudiandae quae dolores dolor! Obcaecati, nostrum impedit!
+                  </p>
+                </div>
+
+                <div id="curriculum" class="tabcontent">
+                  <div class="course-curriculum">
+                    <ul class="curriculum-sections">
+                      <li class="section">
+                        <div class="section-header">
+                          <div class="section-left">
+                            <h5 class="section-title">
+                              Welcome! Course Introduction
+                            </h5>
+                            <span class="section-toggle">
+                              <ion-icon
+                                class="icon-up"
+                                name="chevron-up-outline"
+                              ></ion-icon>
+                              <ion-icon
+                                class="icon-down"
+                                name="chevron-down-outline"
+                              ></ion-icon>
+                            </span>
+                          </div>
+                        </div>
+                        <ul class="section-content">
+                          <li class="preview">
+                            <a href="coursevideo.html"
+                              ><span>A Beginners Introduction to</span
+                              ><span class=" videoLength"> preview </span
+                              ><ion-icon name="lock-closed-outline"></ion-icon>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#"
+                              ><span>A Beginners Introduction to</span
+                              ><span class="videoLength"> 5 minute </span
+                              ><ion-icon name="lock-closed-outline"></ion-icon
+                            ></a>
+                          </li>
+                          <li>
+                            <a href="#"
+                              ><span>A Beginners Introduction to</span
+                              ><span class="videoLength">7 minute </span
+                              ><ion-icon name="lock-closed-outline"></ion-icon
+                            ></a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="section">
+                        <div class="section-header">
+                          <div class="section-left">
+                            <h5 class="section-title">
+                              Welcome! Course Introduction
+                            </h5>
+                            <span class="section-toggle">
+                              <ion-icon
+                                class="icon-up"
+                                name="chevron-up-outline"
+                              ></ion-icon>
+                              <ion-icon
+                                class="icon-down"
+                                name="chevron-down-outline"
+                              ></ion-icon>
+                            </span>
+                          </div>
+                        </div>
+                        <ul class="section-content">
+                          <li>
+                            <a href="#"
+                              ><span>A Beginners Introduction to</span
+                              ><span class=" videoLength"> 10 minute </span
+                              ><ion-icon name="lock-closed-outline"></ion-icon>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#"
+                              ><span>A Beginners Introduction to</span
+                              ><span class="videoLength"> 2 minute </span
+                              ><ion-icon name="lock-closed-outline"></ion-icon
+                            ></a>
+                          </li>
+                          <li>
+                            <a href="#"
+                              ><span>A Beginners Introduction to</span
+                              ><span class="videoLength"> 15 minute </span
+                              ><ion-icon name="lock-closed-outline"></ion-icon
+                            ></a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div id="instructor" class="tabcontent">
+                  <h4>soon</h4>
+                  
+                </div>
+
+                <div id="reviews" class="tabcontent">
+                  <h4>soon</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="course-menu">
+            <div class="menu-video-container">
+              <img src="assets/business.jpg" alt="" />
+            </div>
+            <div class="menu-text-container">
+              <ul>
+                <li class="menu-items">
+                  <div class="text flex">
+                    <ion-icon name="time-outline"></ion-icon>Duration
+                  </div>
+                  <span class="info duration">17 Weeks</span>
+                  <span>Weeks</span>
+                </li>
+                <li class="menu-items">
+                  <div class="text flex">
+                    <ion-icon name="people-outline"></ion-icon>Students
+                  </div>
+                  <span class="info student">17 Weeks</span>
+                </li>
+                <li class="menu-items">
+                  <div class="text flex">
+                    <ion-icon name="book-outline"></ion-icon>Lessons
+                  </div>
+                  <span class="info lessons">17 Weeks</span>
+                </li>
+                <li class="menu-items">
+                  <div class="text flex">
+                    <ion-icon name="stats-chart-outline"></ion-icon>Skill level
+                  </div>
+                  <span class="info level">17 Weeks</span>
+                </li>
+                <li class="menu-items">
+                  <div class="text flex">
+                    <ion-icon name="language-outline"></ion-icon>Language
+                  </div>
+                  <span class="info language">17 Weeks</span>
+                </li>
+                <li class="menu-items">
+                  <div class="text flex">
+                    <ion-icon name="desktop-outline"></ion-icon>Quizzes
+                  </div>
+                  <span class="info quiz">17 Weeks</span>
+                </li>
+                <li class="menu-items">
+                  <div class="text flex">
+                    <ion-icon name="school-outline"></ion-icon>Certifications
+                  </div>
+                  <span class="info cert">17 Weeks</span>
+                </li>
+                <li class="menu-items">
+                  <div class="text flex">
+                    <ion-icon name="checkmark-circle-outline"></ion-icon>Pass
+                    Percentage
+                  </div>
+                  <span class="info pass">17</span>
+                </li>
+                <li class="menu-items">
+                  <div class="text flex">
+                    <ion-icon name="today-outline"></ion-icon>Deadline
+                  </div>
+                  <span class="info deadline">17 Weeks</span>
+                </li>
+                <li class="menu-items">
+                  <div class="text flex">
+                    <ion-icon name="person-outline"></ion-icon>Instructor
+                  </div>
+                  <span class="info instructorName">17 Weeks</span>
+                </li>
+              </ul>
+            </div>
+            <div class="menu-btn-container">
+              <div class="price-btn btn">Price: $<span>49.00</span></div>
+              <a href="checkout.html" class="menu-btn btn">Buy Now</a>
+            </div>
+            <div class="social-share-container">
+              <ul class="social-links">
+                <li>
+                  <a class="footer-link" href="#">
+                    <ion-icon
+                      class="social-icon"
+                      name="logo-instagram"
+                    ></ion-icon>
+                  </a>
+                </li>
+                <li>
+                  <a class="footer-link" href="#">
+                    <ion-icon
+                      class="social-icon"
+                      name="logo-facebook"
+                    ></ion-icon>
+                  </a>
+                </li>
+                <li>
+                  <a class="footer-link" href="#">
+                    <ion-icon
+                      class="social-icon"
+                      name="logo-twitter"
+                    ></ion-icon>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+ <footer class="footer">
+      <div class="container grid grid--footer">
+        <div class="logo-col">
+          <a href="#" class="footer-logo">
+            <img src="assets/logo.png" alt="omnifood logo" class="logo" />
+          </a>
+          <ul class="social-links">
+            <li>
+              <a class="footer-link" href="#">
+                <ion-icon class="social-icon" name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a class="footer-link" href="#">
+                <ion-icon class="social-icon" name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a class="footer-link" href="#">
+                <ion-icon class="social-icon" name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright">
+            Copyright &copy; 2027 by Course,Inc. All rights reserved.
+          </p>
+        </div>
+        <div class="address-col">
+          <p class="footer-heading">Contact us</p>
+          <address class="contacts">
+            <p>623 Harrison St., 2nd Floor, San Francisco, CA 94107</p>
+            <p>
+              <a class="footer-link" href="tel:415-201-6370">415-201-6370</a
+              ><br />
+              <a class="footer-link" href="mail:hello@omnifood.com"
+                >hello@course.com</a
+              >
+            </p>
+          </address>
+        </div>
+        <nav class="nav-col">
+          <p class="footer-heading">Account</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">Create account</a></li>
+            <li><a class="footer-link" href="#">Sign in</a></li>
+            <li><a class="footer-link" href="#">iOS app</a></li>
+            <li><a class="footer-link" href="#">Android app</a></li>
+          </ul>
+        </nav>
+        <nav class="nav-col">
+          <p class="footer-heading">Company</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">About Course </a></li>
+            <li><a class="footer-link" href="#">For Business</a></li>
+            <li><a class="footer-link" href="#"> Partners</a></li>
+            <li><a class="footer-link" href="#">Careers</a></li>
+          </ul>
+        </nav>
+        <nav class="nav-col">
+          <p class="footer-heading">Resources</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">Help center</a></li>
+            <li><a class="footer-link" href="#">Privacy & terms</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="jquery-3.6.4.min.js"></script>
+    <script src="js/courseDetails.js"></script>
+  </body>
+</html>

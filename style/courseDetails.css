@@ -1,0 +1,317 @@
+h5 {
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  max-width: 1200px;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 13rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+
+.img-container {
+  margin-left: -75px;
+  margin-right: -75px;
+}
+
+.img-container img {
+  height: 570px;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.content-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.course-details-header {
+  margin-top: 6rem;
+}
+
+.course-menu {
+  max-height: 100rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -5rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  padding: 1.8rem;
+  box-shadow: 0px 10px 30px rgb(0 0 0 / 7%);
+}
+
+.menu-video-container img {
+  width: 100%;
+}
+
+.menu-text-container,
+.menu-text-container ul {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1.4rem;
+}
+
+.menu-items {
+  width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  font-size: 1.6rem;
+  color: #6f6b80;
+  font-weight: 500;
+}
+
+.menu-items:not(:first-child) {
+  padding-top: 15px;
+  margin-top: 15px;
+  border-top: 1px solid #eeeeee;
+}
+
+ion-icon {
+  font-size: 2rem;
+  color: blue;
+}
+
+.text {
+  justify-content: center;
+  align-items: center;
+  --gap: 0.4rem;
+}
+.menu-btn-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  flex-direction: column;
+  gap: 1.6rem;
+  margin-top: 4.5rem;
+  font-weight: 700;
+}
+
+.menu-btn-container .btn {
+  font-size: 1.8rem;
+  width: 80%;
+  text-align: center;
+  padding: 2.2rem 0;
+}
+
+.menu-btn-container .price-btn {
+  background-color: #f5ffff;
+  color: #0080ff;
+}
+
+.social-share-container .social-links {
+  margin-top: 2rem;
+}
+
+.instructorName {
+  text-transform: capitalize;
+}
+
+/* .text{
+  justify-content: center;
+  --gap: 0.4rem;
+} */
+
+.title-section .heading {
+  font-size: 4rem;
+}
+
+/* ---------------COURSE DETAILS--------------- */
+
+.course-details {
+  padding-inline: 1.5rem;
+}
+
+.course-details-header {
+  display: flex;
+  margin-bottom: 3rem;
+  align-items: center;
+}
+
+.course-heading {
+  font-weight: 800;
+  font-size: 4rem;
+  line-height: 1.4;
+  margin-bottom: 5rem;
+}
+
+.instructor {
+  --gap: 1.4rem;
+  align-items: center;
+}
+
+/* ---------------TAB STYLE--------------- */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+/* .tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+} */
+
+.tab-panels {
+  margin-top: 3rem;
+  min-height: 70rem;
+}
+
+.tab-panels h4 {
+  font-size: 2.4rem;
+  line-height: 1.5;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.tab-panels p {
+  font-size: 1.6rem;
+  margin-bottom: 3rem;
+  color: #6f6b80;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+}
+
+.tabcontent {
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.tab-nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f5f5f5;
+  padding: 1rem;
+  border-radius: 0.7rem;
+}
+
+.tab-nav button {
+  font-size: 1.7rem;
+  font-weight: 700;
+  border: none;
+  background-color: transparent;
+  padding: 1rem;
+  margin-inline: 1rem;
+}
+
+.tab-nav button:hover {
+  color: blue;
+}
+
+.tab-nav button.active {
+  color: blue;
+}
+
+/* ----------------------LEFT SECTION ------------ */
+.section {
+  background: #ffffff;
+  box-shadow: 0px 8px 30px rgb(0 0 0 / 6%);
+  border-radius: 5px;
+  padding: 0 35px 35px;
+  margin-bottom: 3rem;
+}
+.section-header {
+  padding: 1.3rem 0;
+  border: 0 none;
+  background: transparent;
+  width: 100%;
+  text-align: left;
+  border-radius: 5px;
+  transition: 0.4s;
+}
+
+.section-left {
+  display: flex;
+  align-items: center;
+}
+
+.section-left span {
+  margin-left: auto;
+}
+
+.section-header h5 {
+  font-weight: 700;
+  line-height: 32px;
+  font-size: 2rem;
+}
+
+.section-content li {
+  padding: 1.4rem 0;
+  margin-bottom: 0.2rem;
+}
+
+.section-content li:not(:first-child) {
+  border-top: 1px solid #eee;
+}
+
+.section-content li a {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  color: #6f6b80;
+}
+
+.videoLength {
+  margin-left: auto;
+  margin-right: 1rem;
+  padding: 0.6rem;
+  background-color: aqua;
+  border-radius: 0.7rem;
+  color: #fff;
+}
+
+.preview ion-icon{
+  display: none;
+}
+
+.section.close {
+  height: 25px;
+  border: 1px solid #caf0f8;
+}
+
+.section.close .section-content {
+  display: none;
+}
+
+.icon-up {
+  display: none;
+}
+
+.section.close .icon-up {
+  display: block;
+}
+
+.section.close .icon-down {
+  display: none;
+}

@@ -1,0 +1,7 @@
+{
+    "courseId": 1,
+    "curriculum":{
+        "first section": ["video1,video2"],
+        "second section": ["video1,video2"]
+    }
+}

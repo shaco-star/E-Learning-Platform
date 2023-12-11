@@ -1,0 +1,727 @@
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+}
+
+* {
+  /* padding: 0;
+  margin: 0; */
+}
+
+body {
+  margin: 0 auto;
+  height: 100vh;
+  /* background: rgb(255, 255, 255);
+  background: linear-gradient(
+    313deg,
+    rgba(255, 255, 255, 1) 48%,
+    rgba(0, 212, 255, 1) 69%
+  ); */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  outline: 0;
+}
+
+button {
+  stroke: none;
+}
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+main section:not(:first-child) {
+  background-color: white;
+}
+
+.header {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+  color: #023e8a;
+}
+
+.background {
+  background-image: url(../assets/cool-background\(1\).png);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
+}
+
+.sticky header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 95%;
+  height: 8rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: rgba(255, 255, 255, 0.97);
+  z-index: 999;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+}
+
+.sticky .section-hero {
+  margin-top: 9.6rem;
+}
+
+/************* HEADER *************/
+
+/* header {
+  height: 9.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4.8rem;
+} */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* Because we want it to be sticky later */
+  height: 9.6rem;
+  padding: 0 4.8rem;
+  position: relative;
+}
+
+.logo {
+  height: 6rem;
+  width: 8rem;
+  object-fit: contain;
+  aspect-ratio: 1/1;
+}
+
+header ul {
+  font-size: 2rem;
+  --gap: 2.4rem;
+  color: #010c80;
+}
+
+header ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login {
+  margin-left: 2.5rem;
+}
+
+.btn {
+  background-color: #0080ff;
+  color: white;
+  padding: 1rem;
+  border-radius: 0.7rem;
+  transition: all ease-in-out 0.05s;
+  border: 0.2rem solid #0080ff;
+}
+
+.btn:is(:hover, :focus) {
+  background-color: white;
+  color: #0080ff;
+  border: 0.2rem solid #0080ff;
+}
+
+.prof-img-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.prof-img-container div{
+  display: none;
+}
+
+.prof-img-container:hover div {
+  position: absolute;
+  display: block;
+  background: #fff;
+  width: 150px;
+  height: 150px;
+  top: 64px;
+  right: -44px;
+  border-radius: 5px;
+}
+
+/************* HERO SECTION *************/
+.section-hero {
+  padding: 4.8rem 0px 9.6rem;
+}
+
+.hero {
+  max-width: 120rem;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 9.6rem;
+  margin: 0px auto;
+  padding: 0px 3.2rem;
+}
+
+.hero img {
+  width: 700px;
+}
+
+.hero-text-box h1 {
+  font-size: 4rem;
+  color: #001233;
+}
+
+/************* COURSES SECTION *************/
+.section-courses {
+  padding: 4.8rem 0px 3.2rem;
+}
+
+.heading {
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.6rem;
+  color: #001233;
+  text-align: center;
+}
+
+.course-section-list a {
+  padding: 0.8rem 0.8rem;
+}
+
+.course-section-list li {
+  display: flex;
+  padding: 0.8rem 0.8rem;
+}
+
+.course-section-list li a.active {
+  display: inline-block;
+  padding: 0.8rem 0.8rem;
+  text-transform: uppercase;
+  border-radius: 35px;
+  background-color: #0080ff;
+  color: #fff;
+}
+
+.courses-container {
+  grid-template-columns: repeat(3, 1fr);
+  padding-top: 4.8rem;
+  --gap: 2rem;
+}
+
+.course-details-container {
+  padding: 3rem;
+}
+
+.course-card {
+  max-width: 50rem;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  border-radius: 1.2rem;
+  overflow: hidden;
+  transition: all 0.4s;
+}
+
+.animation {
+  animation-name: example;
+  animation-duration: 0.5s;
+}
+
+@keyframes example {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.course-heading {
+  justify-content: space-between;
+  font-size: 1.4rem;
+}
+.course-img {
+  height: 25rem;
+  width: 100%;
+  object-fit: cover;
+  overflow: clip;
+}
+.lessons {
+  align-items: center;
+  --gap: 0.6rem;
+}
+.lessons img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.8rem 0.8rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #03045e;
+  border-radius: 40px;
+  background-color: #caf0f8;
+}
+
+.course-name {
+  padding-top: 2rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+/* .instructor-card img {
+  padding: 1.4rem 0;
+  height: 4.6rem;
+  width: 4.6rem;
+  border-radius: 50%;
+} */
+
+.circular-img {
+  padding: 1.4rem 0;
+  height: 4.6rem;
+  width: 4.6rem;
+  border-radius: 50%;
+}
+
+.instructor-container::before,
+.instructor-container::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: #dee2e6;
+}
+
+.instructor-container > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.instructor-details-card {
+  flex-direction: column;
+  --gap: 0.5rem;
+}
+
+.instructor-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.instructor-role {
+  font-size: 1.3rem;
+  text-transform: capitalize;
+  font-weight: 400;
+  color: #00a6fb;
+}
+
+.learn-more-card {
+  padding-top: 1.6rem;
+  justify-content: space-between;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.learn-more-card a {
+  cursor: pointer;
+  transition: all 200ms;
+}
+
+.learn-more-card a:hover {
+  color: #0080ff;
+}
+
+.view-all-courses {
+  text-align: center;
+  margin: 7rem 0;
+  font-size: 1.8rem;
+}
+
+.view-all-courses a {
+  background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 1)
+    ),
+    linear-gradient(
+      90deg,
+      rgba(2, 62, 138, 1) 9%,
+      rgba(9, 9, 121, 1) 22%,
+      rgba(0, 212, 255, 1) 81%
+    );
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+}
+
+.view-all-courses a:hover {
+  background-size: 0 3px, 100% 3px;
+}
+
+/************* CATEGORY SECTION *************/
+
+.section-category {
+  padding: 9.6rem 0px;
+  background-image: url(../assets/cool-background\(1\).png);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
+}
+
+.category-heading {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.category-container {
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 1.6rem;
+  margin-top: 6rem;
+}
+
+.category-heading .header {
+  margin-bottom: 7rem;
+}
+
+.category-heading p {
+  font-size: 1.8rem;
+  line-height: 1.7;
+  padding: 0;
+}
+
+.category-card {
+  max-width: 24rem;
+  border-radius: 1.2rem;
+  align-items: center;
+  padding: 0.2rem 2rem;
+  background-color: #fff;
+  --gap: 0;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: 0.4s all;
+}
+
+.box-wrap:hover .category-card {
+  filter: blur(3px);
+  opacity: 0.5;
+  transform: scale(0.98);
+  box-shadow: none;
+}
+.box-wrap:hover .category-card:hover {
+  transform: scale(1);
+  filter: blur(0px);
+  opacity: 1;
+  box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.125);
+}
+
+.category-card .circular-img {
+  height: 8rem;
+  width: 8rem;
+}
+
+.category-details-container {
+  padding-left: 4rem;
+}
+
+.category-details-container p:first-child {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.category-details-container p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+/************* ABOUT SECTION *************/
+
+.section-about {
+  padding: 9.6rem 0px;
+}
+.section-about .container {
+  flex-direction: column;
+  --gap: 2rem;
+}
+.section-about img {
+  width: 40rem;
+  height: 40rem;
+}
+
+.about-section-item {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  align-items: start;
+  row-gap: 13rem;
+  column-gap: 5rem;
+}
+
+.about-text h3 {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+  color: #023e8a;
+}
+.about-text p {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  width: 80%;
+}
+
+.img-circular-box {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-circular-box img {
+  z-index: 1;
+}
+
+.img-circular-box::after,
+.img-circular-box::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  border-radius: 50%;
+}
+
+.img-circular-box::before {
+  width: 80%;
+  padding-bottom: 80%;
+  background-color: #caf0f8;
+}
+
+.img-circular-box::after {
+  width: 45%;
+  padding-bottom: 45%;
+  background-color: #90e0ef;
+}
+
+/************* INSTRUCTOR SECTION *************/
+
+.section-instructors {
+  padding: 9.6rem 0px;
+  background-image: url(../assets/cool-background\(1\).png);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
+}
+
+.section-instructors-text {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  width: 80%;
+}
+
+.instructor-card .instructor-role {
+  color: #023e8a;
+}
+
+.section-instructors .header {
+  margin-bottom: 4rem;
+}
+
+.instructors-card-container {
+  margin-top: 4.8rem;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  flex-direction: row;
+}
+
+.instructor-card {
+  max-width: 28rem;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  padding-bottom: 1.6rem;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: all 0.3s ease-in-out;
+}
+
+.instructor-card:hover {
+  transform: translateY(-18px);
+}
+
+.instructor-card-description {
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.instructor-card-description .course-name {
+  padding: 0;
+}
+
+.instructor-card-description .circular-img {
+  width: 6.2rem;
+  height: 6.2rem;
+}
+
+.instructor-card img {
+  width: 100%;
+}
+
+/************* GET STARTED SECTION *************/
+
+.section-get-started {
+  padding: 9.6rem 0px;
+}
+
+.get-started-card-container {
+  justify-content: center;
+  align-items: center;
+}
+
+.get-started-card {
+  width: 100%;
+  height: 40rem;
+  background-image: url(../assets/Shiny\Overlay\(1\).svg);
+  border-radius: 1.2rem;
+  color: #fff;
+  overflow: hidden;
+  grid-template-columns: 2fr 1fr;
+}
+
+.get-started-text {
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+  color: #fff;
+}
+
+.get-started-text .heading {
+  font-size: 3.5rem;
+  color: #fff;
+}
+
+.get-started-text p {
+  font-size: 1.3rem;
+  margin-bottom: 4rem;
+}
+
+.get-started-img {
+  background-image: url(../assets/start1.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.btn-container {
+  padding-top: 4rem;
+  --gap: 1.5rem;
+}
+
+.btn-container .btn {
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+/************* FOOTER *************/
+
+.footer {
+  padding: 12.8rem 0;
+  border-top: 1px solid #eee;
+  /* background-color: #0080ff; */
+}
+
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 3.2rem;
+}
+
+.grid--footer {
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.contacts:first-child {
+  margin-bottom: 2.4rem;
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 2.4rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #767676;
+  transition: all 0.3s;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: #555;
+}
+
+.footer-logo {
+  display: block;
+  margin-bottom: 3.2rem;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+}
+
+.social-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.copyright {
+  font-size: 1.4rem;
+  color: #767676;
+  line-height: 1.6;
+  margin-top: auto;
+}

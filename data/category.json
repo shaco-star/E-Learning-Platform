@@ -1,0 +1,40 @@
+{
+    "categories": [
+        {
+            "id": 1,
+            "name": "Development",
+            "img": "assets/website-content.png",
+            "courseNumber": 20
+        },
+        {
+            "id": 2,
+            "name": "Art & Design",
+            "img": "assets/brush.png",
+            "courseNumber": 25
+        },
+        {
+            "id": 3,
+            "name": "videography",
+            "img": "assets/videography.png",
+            "courseNumber": 30
+        },
+        {
+            "id": 4,
+            "name": "Marketing",
+            "img": "assets/social-media.png",
+            "courseNumber": 80
+        },
+        {
+            "id": 5,
+            "name": "finance & Banking",
+            "img": "assets/budget.png",
+            "courseNumber": 20
+        },
+        {
+            "id": 6,
+            "name": "Content Writing",
+            "img": "assets/content-writing.png",
+            "courseNumber": 20
+        }
+    ]
+}
