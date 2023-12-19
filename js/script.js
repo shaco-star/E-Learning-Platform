@@ -7,12 +7,11 @@ let category;
 let allCards;
 let instructors;
 
+const profImg = document.querySelector(".profImg");
+const imgUrl = "./assets/laura-jones.jpg";
+profImg.src = imgUrl;
 
-const profImg = document.querySelector(".profImg")
-const imgUrl = "./assets/laura-jones.jpg"
-profImg.src = imgUrl
-
-
+console.log("test");
 fetch("data/courses.json")
   .then((response) => response.json())
   .then((json) => {
@@ -23,16 +22,37 @@ fetch("data/courses.json")
   })
   .catch((err) => console.error(err));
 
-fetch("data/category.json")
+// fetch("data/category.json")
+//   .then((response) => response.json())
+//   .then((json) => {
+//     category = json.categories;
+//     category.map((el) => {
+//       createCategoryCard(el);
+//     });
+//   })
+
+//   .catch((err) => console.error(err));
+
+// fetch("http://localhost/courses/server.php/getAllCategories")
+//   .then((response) => response.json())
+//   .then((json) => {
+//     category = json.categories;
+//     category.map((el) => {
+//       console.log(el);
+//       createCategoryCard(el);
+//     });
+//   })
+
+//   .catch((err) => console.error(err));
+
+fetch("http://localhost/courses/server.php/getAllCategories")
   .then((response) => response.json())
   .then((json) => {
-    category = json.categories;
-    category.map((el) => {
-      createCategoryCard(el);
-    });
+    console.log(json)
   })
 
   .catch((err) => console.error(err));
+
 
 fetch("data/instructor.json")
   .then((response) => response.json())
@@ -81,7 +101,6 @@ courseCategoryList.forEach((el) => {
   });
 });
 
-
 // ----------------NAV BAR------------------------
 
 const sectionHeroEl = document.querySelector(".section-hero");
@@ -104,9 +123,6 @@ const observer = new IntersectionObserver(
   }
 );
 observer.observe(sectionHeroEl);
-
-
-
 
 // allLinks.forEach((link) => {
 //   link.addEventListener("click", (e) => {

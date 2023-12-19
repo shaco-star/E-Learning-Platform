@@ -1,3 +1,17 @@
+<?php
+    include 'connection.php';
+
+    $instructorsResult = mysqli_query($conn,"select firstName from instructors");
+    $num_Instructors = mysqli_num_rows($instructorsResult);
+
+    $coursesResult = mysqli_query($conn,"select courseId from Courses");
+    $num_Courses = mysqli_num_rows($coursesResult);
+
+    $studentsResult=mysqli_query($conn,"select userId from users WHERE userType='student'");
+    $num_Students=mysqli_num_rows($studentsResult);
+
+    $newStudents=mysqli_query($conn, "SELECT * FROM students ORDER BY studentId DESC LIMIT 4");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +37,7 @@
             list-style: none;
         }
         h1,h2{
-          color: #444;  
+            color: #444;  
         }
         h3{
             color: #999;
@@ -122,8 +136,8 @@
             align-items: center;
         }
         .container .header .nav .user img{
-           width: 40px;
-           height: 40px; 
+            width: 40px;
+            height: 40px; 
         }
         .container .header .nav .user .img-case{
             position: relative;
@@ -146,19 +160,19 @@
         .container .content .cards{
             padding: 20px 15px;
             display: flex;
-           align-items: center;
-           justify-content: space-between;
-           flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
         }
         .container .content .cards .card{
-           width: 250px;
-           height: 150px;
-           background: white;
-           margin: 20px 10px; 
-           display: flex;
-           align-items: center;
-           justify-content: space-around;
-           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+            width: 250px;
+            height: 150px;
+            background: white;
+            margin: 20px 10px; 
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
         }
         .container .content .content-2{
             min-height: 60vh;
@@ -224,7 +238,7 @@
             opacity: 0;
             transform: translate(-50%, -50%) scale(1.25);
             width: 460px;
-            height: 650px;
+            height: 730px;
             padding: 20px 30px;
             background: #fff;
             box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
@@ -243,17 +257,17 @@
                         transform 200ms ease-in-out 0ms;
         }
         .container .header .nav .user .popup .close-btn{
-          position: absolute;
-          top: 10px;
-          right: 10px;
-          width: 15px;
-          height: 15px;
-          background: #888;
-          color: #eee;
-          text-align: center;
-          line-height: 15px;
-          border-radius: 15px;
-          cursor: pointer;  
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 15px;
+            height: 15px;
+            background: #888;
+            color: #eee;
+            text-align: center;
+            line-height: 15px;
+            border-radius: 15px;
+            cursor: pointer;  
         }
         .container .header .nav .user .popup .form h2{
             text-align: center;
@@ -261,13 +275,13 @@
             font-size: 25px;
         }
         .container .header .nav .user .popup .form form .form-element{
-            margin: 25px 0px;
+            margin: 8px 0px;
         }
         .container .header .nav .user .popup .form form .form-element label{
             font-size: 14px;
             color: #222;
         }
-        .container .header .nav .user .popup .form form .form-element input[type="text"]{
+        .container .header .nav .user .popup .form form .form-element input[type="text"], input[type="password"]{
             margin-top: 15px;
             display: block;
             width: 100%;
@@ -293,9 +307,9 @@
         </div>
         <ul>
             <li><img src="images/dashboard (2).png" alt="">&nbsp;<a href="">Dashboard</a> </li>
-            <li><img src="images/reading-book (1).png" alt="">&nbsp;<a href="Students.html">Students</a> </li>
-            <li><img src="images/instructor.png" alt="">&nbsp; <a href="Instructors.html">Instructors</a></li>
-            <li><img src="images/courses-32.png" alt="">&nbsp; <a href="Courses.html">Courses</a></li>
+            <li><img src="images/reading-book (1).png" alt="">&nbsp;<a href="Students.php">Students</a> </li>
+            <li><img src="images/instructor.png" alt="">&nbsp; <a href="Instructors.php">Instructors</a></li>
+            <li><img src="images/courses-32.png" alt="">&nbsp; <a href="Courses.php">Courses</a></li>
         </ul>
     </div>
     <div class="container">
@@ -312,26 +326,34 @@
                     <div class="popup">
                         <div class="close-btn">&times;</div>
                         <div class="form">
-                            <form action="" id="form">
+                            <form action="addInstructor.php" id="form" method="post">
                                 <h2>Add instructor</h2>
                                 <div class="form-element">
+                                    <label for="id">Id: </label>
+                                    <input type="text" id="id" name="id" placeholder="ID">
+                                </div>
+                                <div class="form-element">
                                     <label for="firstName">First name: </label>
-                                    <input type="text" id="firstName" placeholder="First name">
+                                    <input type="text" id="firstName" name="firstName" placeholder="First name">
                                 </div>
                                 <div class="form-element">
                                     <label for="lastName">Last name: </label>
-                                    <input type="text" id="lastName" placeholder="Last name">
+                                    <input type="text" id="lastName" name="lastName" placeholder="Last name">
                                 </div>
                                 <div class="form-element">
                                     <label for="userName">User name: </label>
-                                    <input type="text" id="userName" placeholder="User name">
+                                    <input type="text" id="userName" name="userName" placeholder="User name">
                                 </div>
                                 <div class="form-element">
                                     <label for="email">Email</label>
-                                    <input type="text" id="email" placeholder="example@gmail.com">
+                                    <input type="text" id="email" name="email" placeholder="example@gmail.com">
+                                </div>
+                                <div class="form-element">
+                                    <label for="password">Password: </label>
+                                    <input type="password" id="password" name="password" placeholder="********">
                                 </div>
                                 <div class="form-element" id="form">
-                                    <button class = "btn" type="submit">Add</button>
+                                    <button class = "btn" type="submit" name="submit" id="form">Add</button>
                                 </div>
                             </form>
                             
@@ -348,8 +370,8 @@
             <div class="cards">
                 <div class="card">
                     <div class="box">
-                       <h1>0</h1>
-                       <h3>Students</h3> 
+                        <h1><?php echo $num_Students;?></h1>
+                        <h3>Students</h3> 
                     </div>
                     <div class="icon-case">
                         <img src="images/student image.jpg" alt="">
@@ -357,8 +379,8 @@
                 </div>
                 <div class="card">
                     <div class="box">
-                       <h1>0</h1>
-                       <h3>Instructors</h3> 
+                        <h1><?php echo $num_Instructors;?></h1>
+                        <h3>Instructors</h3> 
                     </div>
                     <div class="icon-case">
                         <img src="images/teachers image.jpg" alt="">
@@ -366,8 +388,8 @@
                 </div>
                 <div class="card">
                     <div class="box">
-                       <h1>0</h1>
-                       <h3>Courses</h3> 
+                        <h1><?php echo $num_Courses;?></h1>
+                        <h3>Courses</h3> 
                     </div>
                     <div class="icon-case">
                         <img src="images/courses image.jpg" alt="">
@@ -375,8 +397,8 @@
                 </div>
                 <div class="card">
                     <div class="box">
-                       <h1>0</h1>
-                       <h3>Total Income</h3> 
+                        <h1>0</h1>
+                        <h3>Total Income</h3> 
                     </div>
                     <div class="icon-case">
                         <img src="images/income image.jpg" alt="">
@@ -438,23 +460,17 @@
                         <h2>New Students</h2>
                         <a href="Students.html" class="btn">View All</a>
                     </div>
-                    <table> 
-                        <tr>
-                            <td><img src="images/user.png" alt=""></td>
-                            <td>student</td>
-                        </tr>
-                        <tr>
-                            <td><img src="images/user.png" alt=""></td>
-                            <td>student</td>
-                        </tr>
-                        <tr>
-                            <td><img src="images/user.png" alt=""></td>
-                            <td>student</td>
-                        </tr>
-                        <tr>
-                            <td><img src="images/user.png" alt=""></td>
-                            <td>student</td>
-                        </tr>
+                    <table>
+                        <?php
+                            while($row=mysqli_fetch_assoc($newStudents)){
+                                echo "
+                                <tr>
+                                    <td><img src='images/user.png'></td>
+                                    <td>".$row['studentName']."</td>
+                                </tr>
+                                ";
+                            }
+                        ?>
                     </table>
                 </div>
             </div>
@@ -467,32 +483,6 @@
     document.querySelector(".container .header .nav .user .popup .close-btn").addEventListener("click", function(){
         document.querySelector(".container .header .nav .user .popup").classList.remove("active");
     });
-
-    const form= document.getElementById('form');
-    const firstName=document.getElementById('firstName');
-    const lastName=document.getElementById('lastName');
-    const usertName=document.getElementById('userName');
-    const email=document.getElementById('email');
-
-    form.addEventListener('submit', function(e){
-        e.preventDefault();
-
-        const firstNameValue=firstName.value;
-        const lastNameValue=lastName.value;
-        const userNameValue=usertName.value;
-        const emailValue=email.value;
-
-        localStorage.setItem('first-name', firstNameValue);
-        localStorage.setItem('last-name', lastNameValue);
-        localStorage.setItem('user-name', userNameValue);
-        localStorage.setItem('e-mail', emailValue);
-        
-        window.location.href="Instructors.html";
-        
-    })
-
-    
-
 </script>
 </body>
 </html>
