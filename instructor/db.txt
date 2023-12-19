@@ -1,0 +1,18 @@
+CREATE TABLE `users`(
+    id integer UNSIGNED  NOT NULL AUTO_INCREMENT,
+    name varchar(50)  NOT NULL,
+    email varchar(30) NOT NULL UNIQUE ,
+    bio TEXT ,
+    ncourse varchar(50) NOT NULL,
+    profit int(6) NOT NULL,
+    created_at DATETIME NOT NULL default NOW(),
+    primary key (id)
+
+
+)
+
+INSERT INTO `users` (`name` , `email`,`ncourse`,`profit`) VALUES ("Rawda","rawdaalkashef@gmail.com", "PHP" , 3500)
+
+
+
+
